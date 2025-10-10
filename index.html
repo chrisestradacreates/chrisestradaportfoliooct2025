@@ -8,17 +8,34 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
-    html,body{height:100%;margin:0}
-    body{display:flex;align-items:center;justify-content:center;background:#f6f7fb;font-family:Inter,system-ui,sans-serif;transition:opacity .6s ease}
+    html,body{height:100%;margin:0;background:#fff}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:'Inter',system-ui,sans-serif;
+      transition:opacity .6s ease;
+    }
     body.fade{opacity:0}
-    .loader{font-weight:800;font-size:clamp(36px,6vw,64px);letter-spacing:4px;display:flex;gap:10px}
-    .letter{color:transparent;-webkit-text-stroke:2px #111;transition:color .28s ease}
-    .letter.filled{color:#111;-webkit-text-stroke:0}
-    .sr{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .loader{
+      font-weight:800;
+      font-size:clamp(36px,6vw,64px);
+      letter-spacing:6px;
+      display:flex;
+      gap:8px;
+    }
+    .letter{
+      color:transparent;
+      -webkit-text-stroke:2px #000;
+      transition:color .25s ease;
+    }
+    .letter.filled{
+      color:#000;
+      -webkit-text-stroke:0;
+    }
   </style>
 </head>
 <body>
-  <div aria-live="polite" class="sr">Loading Chris Estrada</div>
   <div class="loader" id="loader"></div>
   <script>
     const name = 'CHRIS ESTRADA';
@@ -29,10 +46,14 @@
       span.className = 'letter';
       loader.appendChild(span);
     });
-    const letters = Array.from(document.querySelectorAll('.letter'));
+
+    const letters = document.querySelectorAll('.letter');
     const interval = 150;
-    letters.forEach((letter, i) => setTimeout(() => letter.classList.add('filled'), i * interval));
-    const total = letters.length * interval + 650;
+    letters.forEach((l,i) =>
+      setTimeout(() => l.classList.add('filled'), i * interval)
+    );
+
+    const total = letters.length * interval + 600;
     setTimeout(() => {
       document.body.classList.add('fade');
       setTimeout(() => { window.location.href = 'portfolio.html'; }, 600);
