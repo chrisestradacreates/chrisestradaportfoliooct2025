@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chris Estrada · Loading</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    html,body{height:100%;margin:0}
+    body{display:flex;align-items:center;justify-content:center;background:#f6f7fb;font-family:Inter,system-ui,sans-serif;transition:opacity .6s ease}
+    body.fade{opacity:0}
+    .loader{font-weight:800;font-size:clamp(36px,6vw,64px);letter-spacing:4px;display:flex;gap:10px}
+    .letter{color:transparent;-webkit-text-stroke:2px #111;transition:color .28s ease}
+    .letter.filled{color:#111;-webkit-text-stroke:0}
+    .sr{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+  </style>
+</head>
+<body>
+  <div aria-live="polite" class="sr">Loading Chris Estrada</div>
+  <div class="loader" id="loader"></div>
+  <script>
+    const name = 'CHRIS ESTRADA';
+    const loader = document.getElementById('loader');
+    name.split('').forEach(ch => {
+      const span = document.createElement('span');
+      span.textContent = ch === ' ' ? '\u00A0' : ch;
+      span.className = 'letter';
+      loader.appendChild(span);
+    });
+    const letters = Array.from(document.querySelectorAll('.letter'));
+    const interval = 150;
+    letters.forEach((letter, i) => setTimeout(() => letter.classList.add('filled'), i * interval));
+    const total = letters.length * interval + 650;
+    setTimeout(() => {
+      document.body.classList.add('fade');
+      setTimeout(() => { window.location.href = 'portfolio.html'; }, 600);
+    }, total);
+  </script>
+</body>
+</html>
