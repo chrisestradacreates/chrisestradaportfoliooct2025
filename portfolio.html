@@ -111,7 +111,13 @@
     #contact p{color:var(--ink-2); max-width:620px; margin:0 auto}
     #contact .icons{display:flex; gap:14px; justify-content:center; margin-top:6px}
     #contact .pill{padding:10px 14px; border:1px solid var(--ink); border-radius:var(--radius)}
-  </style>
+    /* Center Projects section content */
+  #projects{align-items:center;}
+  /* Uniform prototype cards */
+  #saveshare .proto-row{align-items:stretch;}
+  #saveshare .proto-card{flex:0 0 340px;max-width:340px;display:flex;flex-direction:column}
+  #saveshare .proto-card img{aspect-ratio:9/16;object-fit:cover}
+</style>
 </head>
 <body>
   <header>
@@ -220,17 +226,17 @@
         <div class="proto-row">
           <div class="proto-card">
             <img src="images/schoolselect.jpeg" alt="Access page - school select">
-            <h4>Access Page (schoolselect.jpeg)</h4>
+            <h4>Access Page</h4>
             <p>The access page allows users to securely enter their school information, granting them access to the app’s exclusive sections such as ride listings, popular events, and messaging. This ensures that only verified members from the same institution can connect, enhancing both security and community engagement.</p>
           </div>
           <div class="proto-card">
             <img src="images/publiclist.jpeg" alt="Public listing page">
-            <h4>Public Listing Page (publiclist.jpeg)</h4>
+            <h4>Public Listing Page</h4>
             <p>The Public Listings page allows users to post details about their upcoming trips, including destination and time of departure. Other users can browse these listings and message the poster directly to coordinate shared rides, making travel more cost-effective and environmentally sustainable by reducing the number of individual rides.</p>
           </div>
           <div class="proto-card">
             <img src="images/popularevents.jpeg" alt="Popular events page">
-            <h4>Popular Event Page (popularevents.jpeg)</h4>
+            <h4>Popular Event Page</h4>
             <p>The Popular Events page showcases trending events like concerts, making it easy for users to find and join ride listings for these activities. There's also a Popular Destinations section that highlights frequently visited places, such as nearby cities, helping users coordinate shared rides to regular destinations efficiently.</p>
           </div>
         </div>
