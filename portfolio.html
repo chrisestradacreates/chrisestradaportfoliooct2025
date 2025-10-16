@@ -99,6 +99,53 @@
     #saveshare .proto-card h4{margin:10px 0 6px;font-size:16px;font-weight:600}
     #saveshare .proto-card p{margin:0;color:#333;line-height:1.6;font-size:15px}
 
+    /* AllSparkLegal in-page section */
+    #allspark{display:none; flex-direction:column; align-items:center; justify-content:center; min-height:80vh; text-align:center;}
+    #allspark.active{display:flex;}
+    #allspark .hero{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 20px;}
+    #allspark h1{font-family:"Playfair Display",serif; font-size:48px; margin-bottom:10px;}
+    #allspark h2{font-family:Inter,sans-serif; font-weight:400; font-size:20px; color:#333; margin-top:0;}
+    #allspark hr{width:80%;max-width:700px;border:none;border-top:1px solid #ccc;margin:30px 0;}
+    #allspark .info-bubbles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px;}
+    #allspark .info-bubble{border:1px solid var(--ink);border-radius:var(--radius);padding:10px 14px;font-size:14px;font-weight:500;}
+    #allspark iframe{margin-top:30px;width:80%;max-width:720px;height:405px;border-radius:var(--radius);box-shadow:0 4px 14px rgba(0,0,0,0.1);} 
+    #allspark .overview{max-width:700px;margin:30px auto 0;font-size:16px;line-height:1.7;color:#333;text-align:left;}
+    #allspark .role-info{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px;font-size:15px;color:#444;}
+    #allspark .role-info div{background:#f9f9f9;padding:10px 18px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.05);}
+    #allspark .problem-section{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:20px;margin-top:40px;max-width:1000px;}
+    #allspark .problem-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;}
+    #allspark .problem-section p{font-size:16px;line-height:1.7;color:#333;text-align:left;}
+    #allspark .problem-section img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    #allspark .research-section{max-width:900px;margin-top:40px;text-align:left;}
+    #allspark .research-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;}
+    #allspark .research-section p{font-size:16px;line-height:1.7;color:#333;}
+
+    /* Goals diagram */
+    #allspark .goals-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 12px;text-align:center;}
+    #allspark .goals-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:10px;}
+    #allspark .goals-center{width:140px;height:140px;border-radius:50%;background:#34d399;display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.1);margin-bottom:30px;}
+    #allspark .goal-circles{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:nowrap;max-width:1000px;width:100%;}
+    #allspark .goal{width:160px;height:160px;border-radius:50%;background:#f9f9f9;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:15px;line-height:1.4;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:500;}
+    @media (max-width: 760px){
+      #allspark .goal-circles{overflow-x:auto;padding-bottom:8px;}
+    }
+
+    /* Design Process (scoped to AllSparkLegal) */
+    #allspark .design-process{max-width:900px;margin:30px auto 10px;text-align:left;}
+    #allspark .design-process h3{font-family:"Playfair Display",serif;font-size:22px;margin:0 0 10px;}
+    #allspark .design-process ul{margin:0;padding-left:18px;line-height:1.7;color:#333;}
+    #allspark .design-images{display:flex;gap:20px;justify-content:center;align-items:center;max-width:1000px;margin:16px auto 0;flex-wrap:wrap;}
+    #allspark .design-images img{flex:1 1 460px;min-width:260px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);} 
+
+    /* Prototype Showcase (scoped to AllSparkLegal) */
+    #allspark .design-process h3{ text-align:center; }
+    #allspark .proto-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 14px;text-align:center;}
+    #allspark .proto-row{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1100px;margin:0 auto 10px;}
+    #allspark .proto-card{flex:1 1 320px;max-width:360px;text-align:left}
+    #allspark .proto-card img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    #allspark .proto-card h4{margin:10px 0 6px;font-size:16px;font-weight:600}
+    #allspark .proto-card p{margin:0;color:#333;line-height:1.6;font-size:15px}
+
     /* About */
     #about{max-width:1100px; gap:36px; align-items:center; justify-content:center; flex-wrap:wrap}
     #about .text{flex:1 1 420px; font-family:"Playfair Display",serif; font-size:18px; line-height:1.75; color:var(--ink)}
@@ -111,13 +158,20 @@
     #contact p{color:var(--ink-2); max-width:620px; margin:0 auto}
     #contact .icons{display:flex; gap:14px; justify-content:center; margin-top:6px}
     #contact .pill{padding:10px 14px; border:1px solid var(--ink); border-radius:var(--radius)}
+    
     /* Center Projects section content */
-  #projects{align-items:center;}
-  /* Uniform prototype cards */
-  #saveshare .proto-row{align-items:stretch;}
-  #saveshare .proto-card{flex:0 0 340px;max-width:340px;display:flex;flex-direction:column}
-  #saveshare .proto-card img{aspect-ratio:9/16;object-fit:cover}
-</style>
+    #projects{align-items:center;}
+    /* Uniform prototype cards */
+    #saveshare .proto-row{align-items:stretch;}
+    #saveshare .proto-card{flex:0 0 340px;max-width:340px;display:flex;flex-direction:column}
+    #saveshare .proto-card img{aspect-ratio:9/16;object-fit:cover}
+    #allspark .proto-row{align-items:stretch;}
+    #allspark .proto-card{flex:0 0 340px;max-width:340px;display:flex;flex-direction:column}
+    #allspark .proto-card img{aspect-ratio:9/16;object-fit:cover}
+    
+    .back-btn{cursor:pointer;color:#0066cc;font-weight:500;text-align:left;padding:10px 0;margin-top:30px;max-width:900px;}
+    .back-btn:hover{text-decoration:underline;}
+  </style>
 </head>
 <body>
   <header>
@@ -156,7 +210,7 @@
     <section id="projects">
       <h2>View some of my work here:</h2>
       <div class="project-bubbles">
-        <div class="bubble allspark">AllSparkLegal</div>
+        <div class="bubble allspark" id="openAllspark">AllSparkLegal</div>
         <div class="bubble saveshare" id="openSaveShare">SaveShare</div>
       </div>
     </section>
@@ -227,7 +281,7 @@
           <div class="proto-card">
             <img src="images/schoolselect.jpeg" alt="Access page - school select">
             <h4>Access Page</h4>
-            <p>The access page allows users to securely enter their school information, granting them access to the app’s exclusive sections such as ride listings, popular events, and messaging. This ensures that only verified members from the same institution can connect, enhancing both security and community engagement.</p>
+            <p>The access page allows users to securely enter their school information, granting them access to the app's exclusive sections such as ride listings, popular events, and messaging. This ensures that only verified members from the same institution can connect, enhancing both security and community engagement.</p>
           </div>
           <div class="proto-card">
             <img src="images/publiclist.jpeg" alt="Public listing page">
@@ -247,6 +301,88 @@
         </div>
       </div>
       <div class="back-btn" id="backToProjects">← Back to Projects</div>
+    </section>
+
+    <!-- ALLSPARK (in-page) -->
+    <section id="allspark">
+      <div class="hero">
+        <h1>AllSparkLegal</h1>
+        <h2>AllSparkLegal — A Spanish-accessible AI legal intake platform</h2>
+        <hr>
+        <div class="info-bubbles">
+          <div class="info-bubble">Product Management Internship</div>
+          <div class="info-bubble">June – August 2025</div>
+          <div class="info-bubble">0→1 Product Development</div>
+          <div class="info-bubble">Product Strategy</div>
+          <div class="info-bubble">UX Research</div>
+        </div>
+        <div class="overview">
+          <p><strong>Overview:</strong> AllSparkLegal is a legal-tech startup focused on making employment law help more accessible for Spanish-speaking workers in California. I collaborated with an international team of engineers, lawyers, and sales to take the product from 0→1 — defining the vision, user needs, and MVP for an AI-powered, bilingual legal intake chatbot.</p>
+        </div>
+        <div class="role-info">
+          <div><strong>Role:</strong> Product Management Intern · Developer · Researcher · Designer</div>
+          <div><strong>Duration:</strong> June 2025 – August 2025</div>
+        </div>
+        <div class="problem-section">
+          <div style="flex:1 1 400px;text-align:left;min-width:280px;">
+            <h3>Problem</h3>
+            <p>Many Hispanic workers face language and accessibility barriers when seeking legal help. Most legal-tech platforms are English-only and overly complex. AllSparkLegal aimed to create a trustworthy, bilingual experience that simplified intake and improved accessibility for Spanish-speaking users.</p>
+          </div>
+        </div>
+        <div class="research-section">
+          <h3>Research and Validation</h3>
+          <ul style="margin:0;padding-left:18px;line-height:1.7;color:#333;">
+            <li>Conducted 10 user interviews with Spanish-speaking workers to uncover pain points around accessibility and trust.</li>
+            <li>Led 5 usability tests and iterated on voice-to-text, quick-reply chips, and chatbot features to reduce friction in the intake flow.</li>
+            <li>Benchmarked 5+ competitors (LegalZoom, LawDroid, SuperLawyers), revealing 4 major usability and trust gaps that informed our roadmap.</li>
+          </ul>
+        </div>
+        <h3 class="goals-heading">Product Goals:</h3>
+        <div class="goals-diagram">
+          <div class="goals-center">AllSparkLegal</div>
+          <div class="goal-circles">
+            <div class="goal">Build trust through bilingual, empathetic chatbot design</div>
+            <div class="goal">Simplify intake with quick-reply and voice-input features</div>
+            <div class="goal">Automate legal triage for faster attorney matching</div>
+            <div class="goal">Design for accessibility and usability</div>
+          </div>
+        </div>
+        <!-- Design Process -->
+        <div class="design-process">
+          <h3>Design Process:</h3>
+          <ul>
+            <li><strong>Phase 1:</strong> Research synthesis and requirements definition</li>
+            <li><strong>Phase 2:</strong> MVP scoping, color palette, and UI system creation</li>
+            <li><strong>Phase 3:</strong> Chatbot flow design, API integration, and testing</li>
+            <li><strong>Phase 4:</strong> Usability testing, iteration, and MVP launch</li>
+          </ul>
+        </div>
+
+        <h3 class="proto-heading">Product Showcase:</h3>
+        <div class="proto-row">
+          <div class="proto-card">
+            <img src="images/landingpage.jpeg" alt="Landing Page">
+            <h4>Landing Page</h4>
+            <p>The landing page introduces users to the intake process in plain, accessible language and invites them to begin. It establishes credibility and clearly communicates the app's purpose, helping Californians understand their rights.</p>
+          </div>
+          <div class="proto-card">
+            <img src="images/quickreply.jpeg" alt="Quick-Reply Chatbot">
+            <h4>Quick-Reply Chatbot</h4>
+            <p>The live AI chatbot guides users through legal-intake questions using quick-reply buttons, making it easy for Spanish-speaking workers to provide information without complex forms or legal jargon.</p>
+          </div>
+          <div class="proto-card">
+            <img src="images/intakecompletion.jpeg" alt="Intake Completion Screen">
+            <h4>Intake Completion Screen</h4>
+            <p>After the conversation, users are prompted to submit their details and receive tailored information or attorney connection options. This stage reflects the validated flow for summarizing user inputs and directing them toward next steps.</p>
+          </div>
+        </div>
+
+        <h3 class="proto-heading">Results</h3>
+        <div style="max-width:900px;margin:0 auto;text-align:left;color:#333;line-height:1.7;">
+          I helped take AllSparkLegal from 0→1, launching the first functional MVP now live as <strong>FiredInCalifornia.com</strong>. I delivered the MVP in 8 weeks, accelerating development by ~35% and collaborated with an international cross-functional team across law, design, and engineering.
+        </div>
+      </div>
+      <div class="back-btn" id="backToAllspark">← Back to Projects</div>
     </section>
 
     <!-- ABOUT -->
@@ -292,6 +428,7 @@
       intro: document.getElementById('intro'),
       projects: document.getElementById('projects'),
       saveshare: document.getElementById('saveshare'),
+      allspark: document.getElementById('allspark'),
       about: document.getElementById('about'),
       contact: document.getElementById('contact'),
     };
@@ -318,6 +455,10 @@
     // Projects -> SaveShare + back
     bind('openSaveShare', ()=>show('saveshare'));
     bind('backToProjects', ()=>show('projects'));
+
+    // Projects -> AllSparkLegal + back
+    bind('openAllspark', ()=>show('allspark'));
+    bind('backToAllspark', ()=>show('projects'));
   </script>
 </body>
 </html>
