@@ -1,4 +1,52 @@
-<!DOCTYPE html>
+<script>
+    // Custom cursor circle
+    const cursor = document.createElement('div');
+    cursor.style.cssText = `
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #111;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: width 0.1s, height 0.1s;
+    `;
+    document.body.appendChild(cursor);
+
+    let isPressed = false;
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = (e.clientX - 12) + 'px';
+      cursor.style.top = (e.clientY - 12) + 'px';
+    });
+
+    document.addEventListener('mousedown', () => {
+      isPressed = true;
+      cursor.style.width = '16px';
+      cursor.style.height = '16px';
+    });
+
+    document.addEventListener('mouseup', () => {
+      isPressed = false;
+      cursor.style.width = '24px';
+      cursor.style.height = '24px';
+    });
+
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('back-btn') || e.target.classList.contains('bubble')) {
+        cursor.style.width = '32px';
+        cursor.style.height = '32px';
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('back-btn') || e.target.classList.contains('bubble')) {
+        if (!isPressed) {
+          cursor.style.width = '24px';
+          cursor.style.height = '24px';
+        }
+      }
+    });<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -10,7 +58,7 @@
   <style>
     :root{ --ink:#111; --ink-2:#333; --bg:#fff; --muted:#f5f5f5; --green:#34d399; --blueteal:#3cc0ff; --radius:4px; }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;cursor:none;}
     a{color:inherit;text-decoration:none}
     img,iframe{max-width:100%;display:block}
 
@@ -142,9 +190,7 @@
     #allspark .proto-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 14px;text-align:center;}
     #allspark .proto-row{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1100px;margin:0 auto 10px;}
     #allspark .proto-card{flex:1 1 320px;max-width:360px;text-align:left}
-    #allspark .proto-card img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    #allspark .proto-card h4{margin:10px 0 6px;font-size:16px;font-weight:600}
-    #allspark .proto-card p{margin:0;color:#333;line-height:1.6;font-size:15px}
+    #allspark .proto-card img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);height:auto;object-fit:contain;}
 
     /* About */
     #about{max-width:1100px; gap:36px; align-items:center; justify-content:center; flex-wrap:wrap}
@@ -378,9 +424,12 @@
         </div>
 
         <h3 class="proto-heading">Results</h3>
-        <div style="max-width:900px;margin:0 auto;text-align:left;color:#333;line-height:1.7;">
+        <div style="max-width:900px;margin:0 auto;text-align:left;color:#333;line-height:1.7;margin-bottom:20px;">
           I helped take AllSparkLegal from 0→1, launching the first functional MVP now live as <strong>FiredInCalifornia.com</strong>. I delivered the MVP in 8 weeks, accelerating development by ~35% and collaborated with an international cross-functional team across law, design, and engineering.
         </div>
+        <a href="https://firedincalifornia.com/" target="_blank" style="display:inline-block;padding:16px 32px;background:#34d399;color:white;border-radius:8px;font-weight:600;text-decoration:none;transition:.2s;margin:0 auto;cursor:pointer;">
+          Visit FiredInCalifornia.com →
+        </a>
       </div>
       <div class="back-btn" id="backToAllspark">← Back to Projects</div>
     </section>
