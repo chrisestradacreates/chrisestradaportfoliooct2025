@@ -1,52 +1,4 @@
-<script>
-    // Custom cursor circle
-    const cursor = document.createElement('div');
-    cursor.style.cssText = `
-      position: fixed;
-      width: 24px;
-      height: 24px;
-      border: 2px solid #111;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transition: width 0.1s, height 0.1s;
-    `;
-    document.body.appendChild(cursor);
-
-    let isPressed = false;
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = (e.clientX - 12) + 'px';
-      cursor.style.top = (e.clientY - 12) + 'px';
-    });
-
-    document.addEventListener('mousedown', () => {
-      isPressed = true;
-      cursor.style.width = '16px';
-      cursor.style.height = '16px';
-    });
-
-    document.addEventListener('mouseup', () => {
-      isPressed = false;
-      cursor.style.width = '24px';
-      cursor.style.height = '24px';
-    });
-
-    document.addEventListener('mouseover', (e) => {
-      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('back-btn') || e.target.classList.contains('bubble')) {
-        cursor.style.width = '32px';
-        cursor.style.height = '32px';
-      }
-    });
-
-    document.addEventListener('mouseout', (e) => {
-      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('back-btn') || e.target.classList.contains('bubble')) {
-        if (!isPressed) {
-          cursor.style.width = '24px';
-          cursor.style.height = '24px';
-        }
-      }
-    });<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -89,8 +41,8 @@
     .icon:hover{background:var(--ink); color:#fff}
     .icon svg{width:22px; height:22px}
 
-    /* Projects (only here) */
-    #projects{display:none; min-height:80vh; align-items:flex-start; justify-content:center; flex-direction:column; gap:20px; padding-top:40px;}
+    /* Projects */
+    #projects{display:none; min-height:80vh; align-items:center; justify-content:center; flex-direction:column; gap:20px; padding-top:40px;}
     #projects.active{display:flex;}
     #projects h2{font-family:"Playfair Display",serif; font-size:28px; margin:0 auto 10px; text-align:center;}
     #projects .project-bubbles{display:flex; gap:40px; flex-wrap:wrap; justify-content:center; align-items:center; width:100%; max-width:1000px;}
@@ -124,7 +76,6 @@
     #saveshare .goals-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 12px;text-align:center;}
     #saveshare .goals-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:10px;}
     #saveshare .goals-center{width:140px;height:140px;border-radius:50%;background:#3cc0ff;display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.1);margin-bottom:30px;}
-    /* Make four goal circles sit horizontally on one line */
     #saveshare .goal-circles{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:nowrap;max-width:1000px;width:100%;}
     #saveshare .goal{width:160px;height:160px;border-radius:50%;background:#f9f9f9;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:15px;line-height:1.4;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:500;}
     @media (max-width: 760px){
@@ -191,6 +142,8 @@
     #allspark .proto-row{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1100px;margin:0 auto 10px;}
     #allspark .proto-card{flex:1 1 320px;max-width:360px;text-align:left}
     #allspark .proto-card img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);height:auto;object-fit:contain;}
+    #allspark .proto-card h4{margin:10px 0 6px;font-size:16px;font-weight:600}
+    #allspark .proto-card p{margin:0;color:#333;line-height:1.6;font-size:15px}
 
     /* About */
     #about{max-width:1100px; gap:36px; align-items:center; justify-content:center; flex-wrap:wrap}
@@ -370,6 +323,8 @@
           <div><strong>Duration:</strong> June 2025 – August 2025</div>
         </div>
         <div class="problem-section">
+          <div style="flex:1 1 400px;text
+              <div class="problem-section">
           <div style="flex:1 1 400px;text-align:left;min-width:280px;">
             <h3>Problem</h3>
             <p>Many Hispanic workers face language and accessibility barriers when seeking legal help. Most legal-tech platforms are English-only and overly complex. AllSparkLegal aimed to create a trustworthy, bilingual experience that simplified intake and improved accessibility for Spanish-speaking users.</p>
@@ -462,6 +417,57 @@
   </main>
 
   <script>
+    // Custom cursor circle
+    const cursor = document.createElement('div');
+    cursor.style.cssText = `
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #111;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      transition: width 0.1s, height 0.1s;
+    `;
+    document.body.appendChild(cursor);
+
+    let isPressed = false;
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = (e.clientX - 12) + 'px';
+      cursor.style.top = (e.clientY - 12) + 'px';
+    });
+
+    document.addEventListener('mousedown', () => {
+      isPressed = true;
+      cursor.style.width = '16px';
+      cursor.style.height = '16px';
+    });
+
+    document.addEventListener('mouseup', () => {
+      isPressed = false;
+      cursor.style.width = '24px';
+      cursor.style.height = '24px';
+    });
+
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('back-btn') || e.target.classList.contains('bubble') || e.target.classList.contains('cta')) {
+        cursor.style.width = '32px';
+        cursor.style.height = '32px';
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.classList.contains('back-btn') || e.target.classList.contains('bubble') || e.target.classList.contains('cta')) {
+        if (!isPressed) {
+          cursor.style.width = '24px';
+          cursor.style.height = '24px';
+        }
+      }
+    });
+
     // Safely enhance headline words
     (function() {
       const headline = document.getElementById('headlineWords');
