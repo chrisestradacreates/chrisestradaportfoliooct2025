@@ -166,13 +166,22 @@
     #saveshare .proto-card img{aspect-ratio:9/16;object-fit:cover}
     #allspark .proto-row{align-items:stretch;}
     #allspark .proto-card{flex:0 0 340px;max-width:340px;display:flex;flex-direction:column}
-    #allspark .proto-card img{aspect-ratio:9/16;object-fit:cover}
+    /* Ensure AllSpark images never get cropped and scale to all screens */
+    #allspark .proto-card img{width:100%;height:auto;object-fit:contain;max-height:70vh}
     
     .back-btn{cursor:pointer;color:#0066cc;font-weight:500;text-align:left;padding:10px 0;margin-top:30px;max-width:900px;}
     .back-btn:hover{text-decoration:underline;}
+    
+    /* Loader overlay for project transitions */
+    .loader-overlay{position:fixed;inset:0;background:#000;color:#fff;display:none;align-items:center;justify-content:center;z-index:9998}
+    .loader-overlay.active{display:flex}
+    .loader{font-weight:800;font-size:clamp(36px,6vw,64px);letter-spacing:6px;display:flex;gap:8px;font-family:Inter,system-ui,sans-serif}
+    .loader .letter{color:transparent;-webkit-text-stroke:2px #fff;transition:color .25s ease}
+    .loader .letter.filled{color:#fff;-webkit-text-stroke:0}
   </style>
 </head>
 <body>
+  <div class="loader-overlay" id="loaderOverlay"><div class="loader" id="loader"></div></div>
   <header>
     <div class="nav">
       <div class="brand" id="brand">Chris Estrada</div>
@@ -323,8 +332,6 @@
           <div><strong>Duration:</strong> June 2025 – August 2025</div>
         </div>
         <div class="problem-section">
-          <div style="flex:1 1 400px;text
-              <div class="problem-section">
           <div style="flex:1 1 400px;text-align:left;min-width:280px;">
             <h3>Problem</h3>
             <p>Many Hispanic workers face language and accessibility barriers when seeking legal help. Most legal-tech platforms are English-only and overly complex. AllSparkLegal aimed to create a trustworthy, bilingual experience that simplified intake and improved accessibility for Spanish-speaking users.</p>
@@ -354,7 +361,7 @@
           <ul>
             <li><strong>Phase 1:</strong> Research synthesis and requirements definition</li>
             <li><strong>Phase 2:</strong> MVP scoping, color palette, and UI system creation</li>
-            <li><strong>Phase 3:</strong> Chatbot flow design, API integration, and testing</li>
+            <li><strong>Phase 3:</strong> Chatbot design, API integration, and testing</li>
             <li><strong>Phase 4:</strong> Usability testing, iteration, and MVP launch</li>
           </ul>
         </div>
@@ -508,12 +515,47 @@
     bind('viewWork', ()=>show('projects'));
 
     // Projects -> SaveShare + back
-    bind('openSaveShare', ()=>show('saveshare'));
+    bind('openSaveShare', ()=>projectTransition('SAVESHARE', 'saveshare'));
     bind('backToProjects', ()=>show('projects'));
 
     // Projects -> AllSparkLegal + back
-    bind('openAllspark', ()=>show('allspark'));
+    bind('openAllspark', ()=>projectTransition('ALLSPARKLEGAL', 'allspark'));
     bind('backToAllspark', ()=>show('projects'));
+
+    // Project transition with letter-by-letter fill, then show section
+    function projectTransition(text, sectionId){
+      const overlay = document.getElementById('loaderOverlay');
+      const target = document.getElementById('loader');
+      if(!overlay || !target){ show(sectionId); return; }
+      // reset
+      target.innerHTML = '';
+      // set overlay brand color per project
+      overlay.style.background = sectionId === 'allspark' ? 'var(--green)' : 'var(--blueteal)';
+      overlay.classList.add('active');
+      const letters = text.split('');
+      letters.forEach(ch => {
+        const span = document.createElement('span');
+        span.textContent = ch === ' ' ? '\u00A0' : ch;
+        span.className = 'letter';
+        target.appendChild(span);
+      });
+      const spans = target.querySelectorAll('.letter');
+      const interval = 120;
+      spans.forEach((l,i)=> setTimeout(()=> l.classList.add('filled'), i*interval));
+      const total = spans.length*interval + 450;
+      setTimeout(()=>{
+        // Switch content behind overlay first to avoid flicker
+        show(sectionId);
+        // then fade overlay out
+        overlay.style.opacity = '1';
+        overlay.style.transition = 'opacity .4s ease';
+        requestAnimationFrame(()=>{ overlay.style.opacity = '0'; });
+        setTimeout(()=>{
+          overlay.classList.remove('active');
+          overlay.style.opacity = '';
+        }, 400);
+      }, total);
+    }
   </script>
 </body>
 </html>
