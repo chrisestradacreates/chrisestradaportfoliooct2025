@@ -4,9 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chris Estrada — Portfolio</title>
+  <meta name="description" content="Chris Estrada - Stanford Design Student | Product Manager, UX Researcher, Designer | Creating human-centered solutions that blend engineering and creativity">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='60' font-family='Inter, sans-serif' font-weight='600' fill='%23111'%3ECE%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600&family=Fredoka+One:wght@400&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root{ --ink:#111; --ink-2:#333; --bg:#fff; --muted:#f5f5f5; --green:#34d399; --blueteal:#3cc0ff; --radius:4px; }
     *{box-sizing:border-box}
@@ -52,98 +54,102 @@
     #projects .bubble.saveshare:hover{background:var(--blueteal); border-color:var(--blueteal);} 
 
     /* SaveShare in-page section */
-    #saveshare{display:none; flex-direction:column; align-items:center; justify-content:center; min-height:80vh; text-align:center;}
+    #saveshare{display:none; flex-direction:column; align-items:center; justify-content:center; min-height:80vh; text-align:center; padding:40px 20px;}
     #saveshare.active{display:flex;}
-    #saveshare .hero{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 20px;}
-    #saveshare h1{font-family:"Playfair Display",serif; font-size:48px; margin-bottom:10px;}
-    #saveshare h2{font-family:Inter,sans-serif; font-weight:400; font-size:20px; color:#333; margin-top:0;}
-    #saveshare hr{width:80%;max-width:700px;border:none;border-top:1px solid #ccc;margin:30px 0;}
-    #saveshare .info-bubbles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px;}
-    #saveshare .info-bubble{border:1px solid var(--ink);border-radius:var(--radius);padding:10px 14px;font-size:14px;font-weight:500;}
-    #saveshare iframe{margin-top:30px;width:80%;max-width:720px;height:405px;border-radius:var(--radius);box-shadow:0 4px 14px rgba(0,0,0,0.1);} 
-    #saveshare .overview{max-width:700px;margin:30px auto 0;font-size:16px;line-height:1.7;color:#333;text-align:left;}
-    #saveshare .role-info{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px;font-size:15px;color:#444;}
-    #saveshare .role-info div{background:#f9f9f9;padding:10px 18px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.05);}
-    #saveshare .problem-section{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:20px;margin-top:40px;max-width:1000px;}
-    #saveshare .problem-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;}
-    #saveshare .problem-section p{font-size:16px;line-height:1.7;color:#333;text-align:left;}
-    #saveshare .problem-section img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    #saveshare .research-section{max-width:900px;margin-top:40px;text-align:left;}
-    #saveshare .research-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;}
-    #saveshare .research-section p{font-size:16px;line-height:1.7;color:#333;}
+    #saveshare .hero{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 20px 40px; max-width:1200px; width:100%;}
+    #saveshare h1{font-family:"Playfair Display",serif; font-size:clamp(36px,5vw,48px); margin-bottom:16px; color:var(--ink);}
+    #saveshare h2{font-family:Inter,sans-serif; font-weight:400; font-size:clamp(16px,2.5vw,20px); color:#666; margin-top:0; max-width:800px; line-height:1.5;}
+    #saveshare hr{width:100px;max-width:700px;border:none;border-top:2px solid var(--blueteal);margin:32px auto; opacity:0.6;}
+    #saveshare .info-bubbles{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:16px; margin-bottom:32px;}
+    #saveshare .info-bubble{border:1px solid var(--blueteal);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500; background:rgba(60,192,255,0.05); color:var(--blueteal);}
+    #saveshare iframe{margin:32px auto;width:90%;max-width:800px;height:450px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12); border:1px solid #e0e0e0;} 
+    #saveshare .overview{max-width:800px;margin:32px auto 0;font-size:16px;line-height:1.7;color:#444;text-align:left; background:#fafafa; padding:24px; border-radius:12px; border-left:4px solid var(--blueteal);}
+    #saveshare .role-info{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:24px;font-size:14px;color:#555;}
+    #saveshare .role-info div{background:#fff;padding:12px 20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06); border:1px solid #e0e0e0; font-weight:500;}
+    #saveshare .problem-section{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:32px;margin-top:48px;max-width:1200px; padding:32px; background:#f9f9f9; border-radius:16px;}
+    #saveshare .problem-section h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:16px; color:var(--ink);}
+    #saveshare .problem-section p{font-size:16px;line-height:1.7;color:#444;text-align:left; margin-bottom:0;}
+    #saveshare .problem-section img{width:100%;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+    #saveshare .research-section{max-width:900px;margin-top:48px;text-align:left; padding:32px; background:#fff; border-radius:16px; border:1px solid #e0e0e0;}
+    #saveshare .research-section h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:16px; color:var(--ink);}
+    #saveshare .research-section p{font-size:16px;line-height:1.7;color:#444;}
 
     /* Goals diagram */
-    #saveshare .goals-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 12px;text-align:center;}
-    #saveshare .goals-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:10px;}
-    #saveshare .goals-center{width:140px;height:140px;border-radius:50%;background:#3cc0ff;display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.1);margin-bottom:30px;}
-    #saveshare .goal-circles{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:nowrap;max-width:1000px;width:100%;}
-    #saveshare .goal{width:160px;height:160px;border-radius:50%;background:#f9f9f9;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:15px;line-height:1.4;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:500;}
+    #saveshare .goals-heading{font-family:"Playfair Display",serif;font-size:24px;font-weight:600;margin:48px 0 24px;text-align:center; color:var(--ink);}
+    #saveshare .goals-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:24px; padding:32px; background:#f9f9f9; border-radius:16px; max-width:1200px;}
+    #saveshare .goals-center{width:120px;height:120px;border-radius:50%;background:var(--blueteal);display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;box-shadow:0 6px 20px rgba(60,192,255,0.3);margin-bottom:32px;}
+    #saveshare .goal-circles{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;max-width:1000px;width:100%;}
+    #saveshare .goal{width:140px;height:140px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:14px;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,0.08);font-weight:500; border:2px solid #e0e0e0; transition:transform 0.2s ease, box-shadow 0.2s ease;}
+    #saveshare .goal:hover{transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,0.12);}
     @media (max-width: 760px){
       #saveshare .goal-circles{overflow-x:auto;padding-bottom:8px;}
     }
 
     /* Design Process (scoped to SaveShare) */
-    #saveshare .design-process{max-width:900px;margin:30px auto 10px;text-align:left;}
-    #saveshare .design-process h3{font-family:"Playfair Display",serif;font-size:22px;margin:0 0 10px;}
-    #saveshare .design-process ul{margin:0;padding-left:18px;line-height:1.7;color:#333;}
-    #saveshare .design-images{display:flex;gap:20px;justify-content:center;align-items:center;max-width:1000px;margin:16px auto 0;flex-wrap:wrap;}
-    #saveshare .design-images img{flex:1 1 460px;min-width:260px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);} 
+    #saveshare .design-process{max-width:900px;margin:48px auto 24px;text-align:left; padding:32px; background:#fff; border-radius:16px; border:1px solid #e0e0e0;}
+    #saveshare .design-process h3{font-family:"Playfair Display",serif;font-size:24px;margin:0 0 16px; color:var(--ink);}
+    #saveshare .design-process ul{margin:0;padding-left:20px;line-height:1.7;color:#444;}
+    #saveshare .design-process li{margin-bottom:8px;}
+    #saveshare .design-images{display:flex;gap:24px;justify-content:center;align-items:center;max-width:1000px;margin:24px auto 0;flex-wrap:wrap;}
+    #saveshare .design-images img{flex:1 1 400px;min-width:280px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);} 
 
     /* Prototype Showcase (scoped to SaveShare) */
-    #saveshare .design-process h3{ text-align:center; }
-    #saveshare .proto-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 14px;text-align:center;}
-    #saveshare .proto-row{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1100px;margin:0 auto 10px;}
-    #saveshare .proto-card{flex:1 1 320px;max-width:360px;text-align:left}
-    #saveshare .proto-card img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    #saveshare .proto-card h4{margin:10px 0 6px;font-size:16px;font-weight:600}
-    #saveshare .proto-card p{margin:0;color:#333;line-height:1.6;font-size:15px}
+    #saveshare .proto-heading{font-family:"Playfair Display",serif;font-size:24px;font-weight:600;margin:48px 0 24px;text-align:center; color:var(--ink);}
+    #saveshare .proto-row{display:flex;gap:24px;justify-content:center;align-items:stretch;flex-wrap:wrap;max-width:1200px;margin:0 auto 24px;}
+    #saveshare .proto-card{flex:1 1 300px;max-width:320px;text-align:left; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); border:1px solid #e0e0e0; transition:transform 0.2s ease, box-shadow 0.2s ease;}
+    #saveshare .proto-card:hover{transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+    #saveshare .proto-card img{width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06); margin-bottom:16px;}
+    #saveshare .proto-card h4{margin:0 0 8px;font-size:16px;font-weight:600; color:var(--ink);}
+    #saveshare .proto-card p{margin:0;color:#444;line-height:1.6;font-size:14px;}
 
     /* AllSparkLegal in-page section */
-    #allspark{display:none; flex-direction:column; align-items:center; justify-content:center; min-height:80vh; text-align:center;}
+    #allspark{display:none; flex-direction:column; align-items:center; justify-content:center; min-height:80vh; text-align:center; padding:40px 20px;}
     #allspark.active{display:flex;}
-    #allspark .hero{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 20px;}
-    #allspark h1{font-family:"Playfair Display",serif; font-size:48px; margin-bottom:10px;}
-    #allspark h2{font-family:Inter,sans-serif; font-weight:400; font-size:20px; color:#333; margin-top:0;}
-    #allspark hr{width:80%;max-width:700px;border:none;border-top:1px solid #ccc;margin:30px 0;}
-    #allspark .info-bubbles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:10px;}
-    #allspark .info-bubble{border:1px solid var(--ink);border-radius:var(--radius);padding:10px 14px;font-size:14px;font-weight:500;}
-    #allspark iframe{margin-top:30px;width:80%;max-width:720px;height:405px;border-radius:var(--radius);box-shadow:0 4px 14px rgba(0,0,0,0.1);} 
-    #allspark .overview{max-width:700px;margin:30px auto 0;font-size:16px;line-height:1.7;color:#333;text-align:left;}
-    #allspark .role-info{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px;font-size:15px;color:#444;}
-    #allspark .role-info div{background:#f9f9f9;padding:10px 18px;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,0.05);}
-    #allspark .problem-section{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:20px;margin-top:40px;max-width:1000px;}
-    #allspark .problem-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;}
-    #allspark .problem-section p{font-size:16px;line-height:1.7;color:#333;text-align:left;}
-    #allspark .problem-section img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    #allspark .research-section{max-width:900px;margin-top:40px;text-align:left;}
-    #allspark .research-section h3{font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;}
-    #allspark .research-section p{font-size:16px;line-height:1.7;color:#333;}
+    #allspark .hero{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:60px 20px 40px; max-width:1200px; width:100%;}
+    #allspark h1{font-family:"Playfair Display",serif; font-size:clamp(36px,5vw,48px); margin-bottom:16px; color:var(--ink);}
+    #allspark h2{font-family:Inter,sans-serif; font-weight:400; font-size:clamp(16px,2.5vw,20px); color:#666; margin-top:0; max-width:800px; line-height:1.5;}
+    #allspark hr{width:100px;max-width:700px;border:none;border-top:2px solid var(--green);margin:32px auto; opacity:0.6;}
+    #allspark .info-bubbles{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:16px; margin-bottom:32px;}
+    #allspark .info-bubble{border:1px solid var(--green);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500; background:rgba(52,211,153,0.05); color:var(--green);}
+    #allspark iframe{margin:32px auto;width:90%;max-width:800px;height:450px;border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12); border:1px solid #e0e0e0;} 
+    #allspark .overview{max-width:800px;margin:32px auto 0;font-size:16px;line-height:1.7;color:#444;text-align:left; background:#fafafa; padding:24px; border-radius:12px; border-left:4px solid var(--green);}
+    #allspark .role-info{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:24px;font-size:14px;color:#555;}
+    #allspark .role-info div{background:#fff;padding:12px 20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06); border:1px solid #e0e0e0; font-weight:500;}
+    #allspark .problem-section{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:32px;margin-top:48px;max-width:1200px; padding:32px; background:#f9f9f9; border-radius:16px;}
+    #allspark .problem-section h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:16px; color:var(--ink);}
+    #allspark .problem-section p{font-size:16px;line-height:1.7;color:#444;text-align:left; margin-bottom:0;}
+    #allspark .problem-section img{width:100%;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+    #allspark .research-section{max-width:900px;margin-top:48px;text-align:left; padding:32px; background:#fff; border-radius:16px; border:1px solid #e0e0e0;}
+    #allspark .research-section h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:16px; color:var(--ink);}
+    #allspark .research-section p{font-size:16px;line-height:1.7;color:#444;}
 
     /* Goals diagram */
-    #allspark .goals-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 12px;text-align:center;}
-    #allspark .goals-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:10px;}
-    #allspark .goals-center{width:140px;height:140px;border-radius:50%;background:#34d399;display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:18px;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.1);margin-bottom:30px;}
-    #allspark .goal-circles{display:flex;justify-content:center;align-items:center;gap:30px;flex-wrap:nowrap;max-width:1000px;width:100%;}
-    #allspark .goal{width:160px;height:160px;border-radius:50%;background:#f9f9f9;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:15px;line-height:1.4;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:500;}
+    #allspark .goals-heading{font-family:"Playfair Display",serif;font-size:24px;font-weight:600;margin:48px 0 24px;text-align:center; color:var(--ink);}
+    #allspark .goals-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:24px; padding:32px; background:#f9f9f9; border-radius:16px; max-width:1200px;}
+    #allspark .goals-center{width:120px;height:120px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:white;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;box-shadow:0 6px 20px rgba(52,211,153,0.3);margin-bottom:32px;}
+    #allspark .goal-circles{display:flex;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;max-width:1000px;width:100%;}
+    #allspark .goal{width:140px;height:140px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:14px;line-height:1.4;box-shadow:0 4px 12px rgba(0,0,0,0.08);font-weight:500; border:2px solid #e0e0e0; transition:transform 0.2s ease, box-shadow 0.2s ease;}
+    #allspark .goal:hover{transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,0.12);}
     @media (max-width: 760px){
       #allspark .goal-circles{overflow-x:auto;padding-bottom:8px;}
     }
 
     /* Design Process (scoped to AllSparkLegal) */
-    #allspark .design-process{max-width:900px;margin:30px auto 10px;text-align:left;}
-    #allspark .design-process h3{font-family:"Playfair Display",serif;font-size:22px;margin:0 0 10px;}
-    #allspark .design-process ul{margin:0;padding-left:18px;line-height:1.7;color:#333;}
-    #allspark .design-images{display:flex;gap:20px;justify-content:center;align-items:center;max-width:1000px;margin:16px auto 0;flex-wrap:wrap;}
-    #allspark .design-images img{flex:1 1 460px;min-width:260px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);} 
+    #allspark .design-process{max-width:900px;margin:48px auto 24px;text-align:left; padding:32px; background:#fff; border-radius:16px; border:1px solid #e0e0e0;}
+    #allspark .design-process h3{font-family:"Playfair Display",serif;font-size:24px;margin:0 0 16px; color:var(--ink);}
+    #allspark .design-process ul{margin:0;padding-left:20px;line-height:1.7;color:#444;}
+    #allspark .design-process li{margin-bottom:8px;}
+    #allspark .design-images{display:flex;gap:24px;justify-content:center;align-items:center;max-width:1000px;margin:24px auto 0;flex-wrap:wrap;}
+    #allspark .design-images img{flex:1 1 400px;min-width:280px;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.08);} 
 
     /* Prototype Showcase (scoped to AllSparkLegal) */
-    #allspark .design-process h3{ text-align:center; }
-    #allspark .proto-heading{font-family:"Playfair Display",serif;font-size:22px;font-weight:600;margin:30px 0 14px;text-align:center;}
-    #allspark .proto-row{display:flex;gap:22px;justify-content:center;align-items:flex-start;flex-wrap:wrap;max-width:1100px;margin:0 auto 10px;}
-    #allspark .proto-card{flex:1 1 320px;max-width:360px;text-align:left}
-    #allspark .proto-card img{width:100%;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);height:auto;object-fit:contain;}
-    #allspark .proto-card h4{margin:10px 0 6px;font-size:16px;font-weight:600}
-    #allspark .proto-card p{margin:0;color:#333;line-height:1.6;font-size:15px}
+    #allspark .proto-heading{font-family:"Playfair Display",serif;font-size:24px;font-weight:600;margin:48px 0 24px;text-align:center; color:var(--ink);}
+    #allspark .proto-row{display:flex;gap:24px;justify-content:center;align-items:stretch;flex-wrap:wrap;max-width:1200px;margin:0 auto 24px;}
+    #allspark .proto-card{flex:1 1 300px;max-width:320px;text-align:left; background:#fff; padding:20px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); border:1px solid #e0e0e0; transition:transform 0.2s ease, box-shadow 0.2s ease;}
+    #allspark .proto-card:hover{transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,0.12);}
+    #allspark .proto-card img{width:100%;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.06); margin-bottom:16px;height:auto;object-fit:contain;}
+    #allspark .proto-card h4{margin:0 0 8px;font-size:16px;font-weight:600; color:var(--ink);}
+    #allspark .proto-card p{margin:0;color:#444;line-height:1.6;font-size:14px;}
 
     /* About */
     #about{max-width:1100px; gap:36px; align-items:center; justify-content:center; flex-wrap:wrap}
@@ -160,6 +166,10 @@
     
     /* Center Projects section content */
     #projects{align-items:center;}
+    /* Letter-by-letter reveal for projects heading */
+    #projects h2{font-family:"Playfair Display",serif;font-size:28px;margin:0 auto 10px;text-align:center;}
+    #projects h2 .letter{opacity:0;animation:letterReveal 0.1s ease forwards;}
+    @keyframes letterReveal{to{opacity:1}}
     /* Uniform prototype cards */
     #saveshare .proto-row{align-items:stretch;}
     #saveshare .proto-card{flex:0 0 340px;max-width:340px;display:flex;flex-direction:column}
@@ -169,8 +179,8 @@
     /* Ensure AllSpark images never get cropped and scale to all screens */
     #allspark .proto-card img{width:100%;height:auto;object-fit:contain;max-height:70vh}
     
-    .back-btn{cursor:pointer;color:#0066cc;font-weight:500;text-align:left;padding:10px 0;margin-top:30px;max-width:900px;}
-    .back-btn:hover{text-decoration:underline;}
+    .back-btn{cursor:pointer;color:var(--ink);font-weight:500;text-align:left;padding:12px 20px;margin:30px auto;max-width:900px;border:1px solid var(--ink);border-radius:8px;background:rgba(255,255,255,0.8);backdrop-filter:blur(10px);transition:all 0.3s ease;display:inline-block;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+    .back-btn:hover{background:var(--ink);color:#fff;transform:translateX(-4px);box-shadow:0 4px 16px rgba(0,0,0,0.2);}
     
     /* Loader overlay for project transitions */
     .loader-overlay{position:fixed;inset:0;background:#000;color:#fff;display:none;align-items:center;justify-content:center;z-index:9998}
@@ -178,10 +188,66 @@
     .loader{font-weight:800;font-size:clamp(36px,6vw,64px);letter-spacing:6px;display:flex;gap:8px;font-family:Inter,system-ui,sans-serif}
     .loader .letter{color:transparent;-webkit-text-stroke:2px #fff;transition:color .25s ease}
     .loader .letter.filled{color:#fff;-webkit-text-stroke:0}
+
+    /* Smooth page transitions */
+    section{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease, transform 0.6s ease;}
+    section.active{opacity:1;transform:translateY(0);}
+
+    /* Back to top button */
+    .back-to-top{position:fixed;bottom:30px;right:30px;width:50px;height:50px;background:var(--ink);color:#fff;border:none;border-radius:50%;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:20px;z-index:1000;transition:all 0.3s ease;box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+    .back-to-top:hover{background:#333;transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.2);}
+    .back-to-top.visible{display:flex;}
+
+
+    /* Enhanced hover states */
+    .socials .icon{transition:all 0.3s ease;}
+    .socials .icon:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+    .back-btn{transition:all 0.3s ease;}
+    .back-btn:hover{transform:translateX(-4px);color:var(--ink);}
+
+    /* Smooth scroll behavior */
+    html{scroll-behavior:smooth;}
+
+    /* Subtle background pattern with parallax */
+    body::before{content:'';position:fixed;top:0;left:0;width:100%;height:120%;background:radial-gradient(circle at 20% 80%, rgba(60,192,255,0.03) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(52,211,153,0.03) 0%, transparent 50%);pointer-events:none;z-index:-1;will-change:transform;transform:translateY(var(--parallax-1, 0px));}
+    body::after{content:'';position:fixed;top:0;left:0;width:100%;height:140%;background:radial-gradient(circle at 60% 40%, rgba(255,107,107,0.02) 0%, transparent 40%), radial-gradient(circle at 40% 60%, rgba(78,205,196,0.02) 0%, transparent 40%);pointer-events:none;z-index:-1;will-change:transform;transform:translateY(var(--parallax-2, 0px));}
+
+
+    /* Interactive headline word effects */
+    .headline-words .w{transition:all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);display:inline-block;position:relative;}
+    .headline-words .w.design:hover{font-family:'Fredoka One', 'Comic Sans MS', cursive;font-weight:400;color:#ff6b6b;transform:scale(1.08) rotate(-0.5deg);text-shadow:2px 2px 8px rgba(255,107,107,0.3), 0 0 20px rgba(255,107,107,0.2);filter:drop-shadow(0 4px 8px rgba(255,107,107,0.15));}
+    .headline-words .w.engineering:hover{font-family:'Orbitron', 'Courier New', monospace;font-weight:600;color:#4ecdc4;transform:scale(1.03);text-shadow:0 0 10px rgba(78,205,196,0.4), 0 0 20px rgba(78,205,196,0.2);letter-spacing:0.5px;filter:drop-shadow(0 2px 4px rgba(78,205,196,0.1));}
+    .headline-words .w.creativity:hover{background:linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);background-size:300% 300%;animation:rainbow 4s ease-in-out infinite;color:transparent;background-clip:text;-webkit-background-clip:text;transform:scale(1.05);filter:drop-shadow(0 2px 4px rgba(0,0,0,0.1));}
+    @keyframes rainbow{0%{background-position:0% 50%}25%{background-position:100% 50%}50%{background-position:100% 100%}75%{background-position:0% 100%}100%{background-position:0% 50%}}
+
+    /* Scroll-triggered animations */
+    .fade-in{opacity:0;transform:translateY(30px);transition:opacity 0.8s ease, transform 0.8s ease;}
+    .fade-in.visible{opacity:1;transform:translateY(0);}
+    .fade-in-left{opacity:0;transform:translateX(-30px);transition:opacity 0.8s ease, transform 0.8s ease;}
+    .fade-in-left.visible{opacity:1;transform:translateX(0);}
+    .fade-in-right{opacity:0;transform:translateX(30px);transition:opacity 0.8s ease, transform 0.8s ease;}
+    .fade-in-right.visible{opacity:1;transform:translateX(0);}
+
+    /* Progress indicator */
+    .progress-indicator{position:fixed;right:20px;top:50%;transform:translateY(-50%);width:4px;height:200px;background:rgba(0,0,0,0.1);border-radius:2px;z-index:1000;display:none;}
+    .progress-indicator.visible{display:block;}
+    .progress-indicator.saveshare{background:rgba(60,192,255,0.2);}
+    .progress-indicator.allspark{background:rgba(52,211,153,0.2);}
+    .progress-bar{width:100%;background:#3cc0ff;border-radius:2px;transition:height 0.3s ease;height:0%;}
+    .progress-indicator.saveshare .progress-bar{background:#3cc0ff;}
+    .progress-indicator.allspark .progress-bar{background:#34d399;}
+    .progress-indicator .progress-dot{position:absolute;right:-6px;width:16px;height:16px;background:#3cc0ff;border-radius:50%;transition:top 0.3s ease;box-shadow:0 2px 8px rgba(0,0,0,0.2);}
+    .progress-indicator.saveshare .progress-dot{background:#3cc0ff;}
+    .progress-indicator.allspark .progress-dot{background:#34d399;}
   </style>
 </head>
 <body>
   <div class="loader-overlay" id="loaderOverlay"><div class="loader" id="loader"></div></div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <div class="progress-indicator" id="progressIndicator">
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="progress-dot" id="progressDot"></div>
+  </div>
   <header>
     <div class="nav">
       <div class="brand" id="brand">Chris Estrada</div>
@@ -216,7 +282,7 @@
 
     <!-- PROJECTS -->
     <section id="projects">
-      <h2>View some of my work here:</h2>
+      <h2 id="projectsHeading">View some of my work here:</h2>
       <div class="project-bubbles">
         <div class="bubble allspark" id="openAllspark">AllSparkLegal</div>
         <div class="bubble saveshare" id="openSaveShare">SaveShare</div>
@@ -226,41 +292,41 @@
     <!-- SAVESHARE (in-page) -->
     <section id="saveshare">
       <div class="hero">
-        <h1>SaveShare</h1>
-        <h2>SaveShare — A safer, campus-specific ride-sharing prototype for students</h2>
-        <hr>
-        <div class="info-bubbles">
+        <h1 class="fade-in">SaveShare</h1>
+        <h2 class="fade-in">SaveShare — A safer, campus-specific ride-sharing prototype for students</h2>
+        <hr class="fade-in">
+        <div class="info-bubbles fade-in">
           <div class="info-bubble">Solo Project</div>
           <div class="info-bubble">4 Weeks</div>
           <div class="info-bubble">Product Strategy</div>
           <div class="info-bubble">UX Research</div>
           <div class="info-bubble">UI/UX Design</div>
         </div>
-        <iframe src="https://www.youtube.com/embed/4TzQcQd08Ro?start=46" title="SaveShare Video" frameborder="0" allowfullscreen></iframe>
-        <div class="overview">
+        <iframe src="https://www.youtube.com/embed/4TzQcQd08Ro?start=46" title="SaveShare Video" frameborder="0" allowfullscreen loading="lazy" class="fade-in"></iframe>
+        <div class="overview fade-in">
           <p><strong>Overview:</strong> SaveShare is a 4-week solo project through a class where I designed a verified, campus-exclusive ride-sharing prototype that helps students coordinate rides safely, affordably, and sustainably. I led the entire process from research and validation to prototyping and presentation. The concept received strong feedback from peers and the instructor.</p>
         </div>
-        <div class="role-info">
-          <div><strong>Role:</strong> PM, Researcher · Designer</div>
+        <div class="role-info fade-in">
+          <div><strong>Role:</strong> Product Manager · Researcher · Designer</div>
           <div><strong>Duration:</strong> 4 weeks</div>
           <div><strong>Tools:</strong> Figma</div>
         </div>
-        <div class="problem-section">
+        <div class="problem-section fade-in">
           <div style="flex:1 1 400px;text-align:left;min-width:280px;">
             <h3>Problem</h3>
             <p>Students attending the same school often travel to common destinations but typically request individual or shared Uber rides, leading to high costs, inefficient resource use, and potential safety concerns. Existing ride-sharing options like Uber Pool provide minimal cost savings and little coordination between students. There is a need for a more sustainable, affordable, and secure way to share rides among verified students.</p>
           </div>
           <div style="flex:1 1 400px;display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;">
-            <img src="images/sfosplit.jpeg" alt="SFO Split Ride" style="flex:1 1 45%;min-width:240px;">
-            <img src="images/dawa.jpeg" alt="Destination Ride" style="flex:1 1 45%;min-width:240px;">
+            <img src="images/sfosplit.jpeg" alt="SFO Split Ride" style="flex:1 1 45%;min-width:240px;" loading="lazy">
+            <img src="images/dawa.jpeg" alt="Destination Ride" style="flex:1 1 45%;min-width:240px;" loading="lazy">
           </div>
         </div>
-        <div class="research-section">
+        <div class="research-section fade-in">
           <h3>Research and Validation</h3>
           <p>I spoke with Stanford students about how they coordinate rides and observed ride-related posts on Fizz, where users often requested rides but rarely got responses. This validated the need for a campus-only ride-sharing platform focused on verified users, simple coordination, and sustainability.</p>
         </div>
-        <h3 class="goals-heading">Product Goals:</h3>
-        <div class="goals-diagram">
+        <h3 class="goals-heading fade-in">Product Goals:</h3>
+        <div class="goals-diagram fade-in">
           <div class="goals-center">SaveShare</div>
           <div class="goal-circles">
             <div class="goal">Build trust through .edu verification</div>
@@ -270,7 +336,7 @@
           </div>
         </div>
         <!-- Design Process (added) -->
-        <div class="design-process">
+        <div class="design-process fade-in">
           <h3>Design Process:</h3>
           <ul>
             <li><strong>Week 1:</strong> User insights and MVP scope</li>
@@ -279,32 +345,32 @@
             <li><strong>Week 4:</strong> Usability feedback and presentation</li>
           </ul>
         </div>
-        <div class="design-images">
-          <img src="images/wireframe1.jpeg" alt="Wireframe 1">
-          <img src="images/wireframe2.jpeg" alt="Wireframe 2">
+        <div class="design-images fade-in">
+          <img src="images/wireframe1.jpeg" alt="Wireframe 1" loading="lazy">
+          <img src="images/wireframe2.jpeg" alt="Wireframe 2" loading="lazy">
         </div>
 
-        <h3 class="proto-heading">Prototype Showcase:</h3>
-        <div class="proto-row">
+        <h3 class="proto-heading fade-in">Prototype Showcase:</h3>
+        <div class="proto-row fade-in">
           <div class="proto-card">
-            <img src="images/schoolselect.jpeg" alt="Access page - school select">
+            <img src="images/schoolselect.jpeg" alt="Access page - school select" loading="lazy">
             <h4>Access Page</h4>
             <p>The access page allows users to securely enter their school information, granting them access to the app's exclusive sections such as ride listings, popular events, and messaging. This ensures that only verified members from the same institution can connect, enhancing both security and community engagement.</p>
           </div>
           <div class="proto-card">
-            <img src="images/publiclist.jpeg" alt="Public listing page">
+            <img src="images/publiclist.jpeg" alt="Public listing page" loading="lazy">
             <h4>Public Listing Page</h4>
             <p>The Public Listings page allows users to post details about their upcoming trips, including destination and time of departure. Other users can browse these listings and message the poster directly to coordinate shared rides, making travel more cost-effective and environmentally sustainable by reducing the number of individual rides.</p>
           </div>
           <div class="proto-card">
-            <img src="images/popularevents.jpeg" alt="Popular events page">
+            <img src="images/popularevents.jpeg" alt="Popular events page" loading="lazy">
             <h4>Popular Event Page</h4>
             <p>The Popular Events page showcases trending events like concerts, making it easy for users to find and join ride listings for these activities. There's also a Popular Destinations section that highlights frequently visited places, such as nearby cities, helping users coordinate shared rides to regular destinations efficiently.</p>
           </div>
         </div>
 
-        <h3 class="proto-heading">Results</h3>
-        <div style="max-width:900px;margin:0 auto;text-align:left;color:#333;line-height:1.7;">
+        <h3 class="proto-heading fade-in">Results</h3>
+        <div class="fade-in" style="max-width:900px;margin:0 auto;text-align:left;color:#444;line-height:1.7; padding:32px; background:#fff; border-radius:16px; border:1px solid #e0e0e0; font-size:16px;">
           I created a full prototype of SaveShare, a secure, organization-specific ride-sharing platform addressing safety, cost efficiency, and sustainability. I received strong peer and instructor feedback. Students expressed genuine interest in using the app.
         </div>
       </div>
@@ -314,30 +380,30 @@
     <!-- ALLSPARK (in-page) -->
     <section id="allspark">
       <div class="hero">
-        <h1>AllSparkLegal</h1>
-        <h2>AllSparkLegal — A Spanish-accessible AI legal intake platform</h2>
-        <hr>
-        <div class="info-bubbles">
+        <h1 class="fade-in">AllSparkLegal</h1>
+        <h2 class="fade-in">AllSparkLegal — A Spanish-accessible AI legal intake platform</h2>
+        <hr class="fade-in">
+        <div class="info-bubbles fade-in">
           <div class="info-bubble">Product Management Internship</div>
           <div class="info-bubble">June – August 2025</div>
           <div class="info-bubble">0→1 Product Development</div>
           <div class="info-bubble">Product Strategy</div>
           <div class="info-bubble">UX Research</div>
         </div>
-        <div class="overview">
+        <div class="overview fade-in">
           <p><strong>Overview:</strong> AllSparkLegal is a legal-tech startup focused on making employment law help more accessible for Spanish-speaking workers in California. I collaborated with an international team of engineers, lawyers, and sales to take the product from 0→1 — defining the vision, user needs, and MVP for an AI-powered, bilingual legal intake chatbot.</p>
         </div>
-        <div class="role-info">
+        <div class="role-info fade-in">
           <div><strong>Role:</strong> Product Management Intern · Developer · Researcher · Designer</div>
           <div><strong>Duration:</strong> June 2025 – August 2025</div>
         </div>
-        <div class="problem-section">
+        <div class="problem-section fade-in">
           <div style="flex:1 1 400px;text-align:left;min-width:280px;">
             <h3>Problem</h3>
             <p>Many Hispanic workers face language and accessibility barriers when seeking legal help. Most legal-tech platforms are English-only and overly complex. AllSparkLegal aimed to create a trustworthy, bilingual experience that simplified intake and improved accessibility for Spanish-speaking users.</p>
           </div>
         </div>
-        <div class="research-section">
+        <div class="research-section fade-in">
           <h3>Research and Validation</h3>
           <ul style="margin:0;padding-left:18px;line-height:1.7;color:#333;">
             <li>Conducted 10 user interviews with Spanish-speaking workers to uncover pain points around accessibility and trust.</li>
@@ -345,8 +411,8 @@
             <li>Benchmarked 5+ competitors (LegalZoom, LawDroid, SuperLawyers), revealing 4 major usability and trust gaps that informed our roadmap.</li>
           </ul>
         </div>
-        <h3 class="goals-heading">Product Goals:</h3>
-        <div class="goals-diagram">
+        <h3 class="goals-heading fade-in">Product Goals:</h3>
+        <div class="goals-diagram fade-in">
           <div class="goals-center">AllSparkLegal</div>
           <div class="goal-circles">
             <div class="goal">Build trust through bilingual, empathetic chatbot design</div>
@@ -356,37 +422,37 @@
           </div>
         </div>
         <!-- Design Process -->
-        <div class="design-process">
+        <div class="design-process fade-in">
           <h3>Design Process:</h3>
           <ul>
             <li><strong>Phase 1:</strong> Research synthesis and requirements definition</li>
             <li><strong>Phase 2:</strong> MVP scoping, color palette, and UI system creation</li>
-            <li><strong>Phase 3:</strong> Chatbot design, API integration, and testing</li>
+            <li><strong>Phase 3:</strong> Chatbot flow design, API integration, and testing</li>
             <li><strong>Phase 4:</strong> Usability testing, iteration, and MVP launch</li>
           </ul>
         </div>
 
-        <h3 class="proto-heading">Product Showcase:</h3>
-        <div class="proto-row">
+        <h3 class="proto-heading fade-in">Product Showcase:</h3>
+        <div class="proto-row fade-in">
           <div class="proto-card">
-            <img src="images/landingpage.jpeg" alt="Landing Page">
+            <img src="images/landingpage.jpeg" alt="Landing Page" loading="lazy">
             <h4>Landing Page</h4>
             <p>The landing page introduces users to the intake process in plain, accessible language and invites them to begin. It establishes credibility and clearly communicates the app's purpose, helping Californians understand their rights.</p>
           </div>
           <div class="proto-card">
-            <img src="images/quickreply.jpeg" alt="Quick-Reply Chatbot">
+            <img src="images/quickreply.jpeg" alt="Quick-Reply Chatbot" loading="lazy">
             <h4>Quick-Reply Chatbot</h4>
             <p>The live AI chatbot guides users through legal-intake questions using quick-reply buttons, making it easy for Spanish-speaking workers to provide information without complex forms or legal jargon.</p>
           </div>
           <div class="proto-card">
-            <img src="images/intakecompletion.jpeg" alt="Intake Completion Screen">
+            <img src="images/intakecompletion.jpeg" alt="Intake Completion Screen" loading="lazy">
             <h4>Intake Completion Screen</h4>
             <p>After the conversation, users are prompted to submit their details and receive tailored information or attorney connection options. This stage reflects the validated flow for summarizing user inputs and directing them toward next steps.</p>
           </div>
         </div>
 
-        <h3 class="proto-heading">Results</h3>
-        <div style="max-width:900px;margin:0 auto;text-align:left;color:#333;line-height:1.7;margin-bottom:20px;">
+        <h3 class="proto-heading fade-in">Results</h3>
+        <div class="fade-in" style="max-width:900px;margin:0 auto;text-align:left;color:#444;line-height:1.7;margin-bottom:20px; padding:32px; background:#fff; border-radius:16px; border:1px solid #e0e0e0; font-size:16px;">
           I helped take AllSparkLegal from 0→1, launching the first functional MVP now live as <strong>FiredInCalifornia.com</strong>. I delivered the MVP in 8 weeks, accelerating development by ~35% and collaborated with an international cross-functional team across law, design, and engineering.
         </div>
         <a href="https://firedincalifornia.com/" target="_blank" style="display:inline-block;padding:16px 32px;background:#34d399;color:white;border-radius:8px;font-weight:600;text-decoration:none;transition:.2s;margin:0 auto;cursor:pointer;">
@@ -399,7 +465,7 @@
     <!-- ABOUT -->
     <section id="about">
       <div class="image">
-        <img src="images/jellyfish.jpg" alt="Chris Estrada looking at jellyfish" onerror="this.style.display='none'">
+        <img src="images/jellyfish.jpg" alt="Chris Estrada looking at jellyfish" loading="lazy" onerror="this.style.display='none'">
       </div>
       <div class="text">
         <p>Hello! I'm Chris Estrada. I am a student at Stanford University majoring in Design, an interdisciplinary engineering degree that equips me to build across both digital and physical mediums with a human-centered perspective.</p>
@@ -475,13 +541,36 @@
       }
     });
 
-    // Safely enhance headline words
+    // Safely enhance headline words with special effects
     (function() {
       const headline = document.getElementById('headlineWords');
       if (headline && !headline.dataset.enhanced) {
         const words = headline.textContent.trim().split(/\s+/);
-        headline.innerHTML = words.map(w => `<span class='w'>${w}</span>`).join(' ');
+        headline.innerHTML = words.map(w => {
+          const cleanWord = w.toLowerCase().replace(/[.,!?]/g, '');
+          if (cleanWord === 'design') return `<span class='w design'>${w}</span>`;
+          if (cleanWord === 'engineering') return `<span class='w engineering'>${w}</span>`;
+          if (cleanWord === 'creativity') return `<span class='w creativity'>${w}</span>`;
+          return `<span class='w'>${w}</span>`;
+        }).join(' ');
         headline.dataset.enhanced = "1";
+      }
+    })();
+
+    // Letter-by-letter reveal for projects heading
+    (function() {
+      const projectsHeading = document.getElementById('projectsHeading');
+      if (projectsHeading && !projectsHeading.dataset.enhanced) {
+        const text = projectsHeading.textContent;
+        projectsHeading.innerHTML = '';
+        text.split('').forEach((char, index) => {
+          const span = document.createElement('span');
+          span.textContent = char === ' ' ? '\u00A0' : char;
+          span.className = 'letter';
+          span.style.animationDelay = `${index * 0.1}s`;
+          projectsHeading.appendChild(span);
+        });
+        projectsHeading.dataset.enhanced = "1";
       }
     })();
 
@@ -516,17 +605,24 @@
 
     // Projects -> SaveShare + back
     bind('openSaveShare', ()=>projectTransition('SAVESHARE', 'saveshare'));
-    bind('backToProjects', ()=>show('projects'));
+    bind('backToProjects', ()=>showWithTransition('projects'));
 
     // Projects -> AllSparkLegal + back
     bind('openAllspark', ()=>projectTransition('ALLSPARKLEGAL', 'allspark'));
-    bind('backToAllspark', ()=>show('projects'));
+    bind('backToAllspark', ()=>showWithTransition('projects'));
 
     // Project transition with letter-by-letter fill, then show section
     function projectTransition(text, sectionId){
       const overlay = document.getElementById('loaderOverlay');
       const target = document.getElementById('loader');
-      if(!overlay || !target){ show(sectionId); return; }
+      if(!overlay || !target){ showWithTransition(sectionId); return; }
+      
+      // Hide current section immediately to prevent flicker
+      const currentSection = document.querySelector('section.active');
+      if (currentSection) {
+        currentSection.classList.remove('active');
+      }
+      
       // reset
       target.innerHTML = '';
       // set overlay brand color per project
@@ -544,8 +640,13 @@
       spans.forEach((l,i)=> setTimeout(()=> l.classList.add('filled'), i*interval));
       const total = spans.length*interval + 450;
       setTimeout(()=>{
-        // Switch content behind overlay first to avoid flicker
-        show(sectionId);
+        // Show target section behind overlay
+        const targetSection = sections[sectionId];
+        if (targetSection) {
+          targetSection.classList.add('active');
+          targetSection.style.opacity = '1';
+          targetSection.style.transform = 'translateY(0)';
+        }
         // then fade overlay out
         overlay.style.opacity = '1';
         overlay.style.transition = 'opacity .4s ease';
@@ -556,6 +657,144 @@
         }, 400);
       }, total);
     }
+
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    // Enhanced section transitions with loading animation
+    function showWithTransition(id) {
+      const currentSection = document.querySelector('section.active');
+      const targetSection = sections[id];
+      
+      if (currentSection && currentSection !== targetSection) {
+        // Add exit animation
+        currentSection.style.opacity = '0';
+        currentSection.style.transform = 'translateY(-20px)';
+        
+        setTimeout(() => {
+          // Hide current section
+          currentSection.classList.remove('active');
+          
+          // Show target section with entrance animation
+          if (targetSection) {
+            targetSection.classList.add('active');
+            // Trigger reflow to ensure transition works
+            targetSection.offsetHeight;
+            targetSection.style.opacity = '1';
+            targetSection.style.transform = 'translateY(0)';
+          }
+          
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 300);
+      } else if (targetSection) {
+        targetSection.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Override the show function to use enhanced transitions
+    const originalShow = show;
+    show = showWithTransition;
+
+    // Scroll-triggered animations and progress indicator
+    const progressIndicator = document.getElementById('progressIndicator');
+    const progressBar = document.getElementById('progressBar');
+    const progressDot = document.getElementById('progressDot');
+    let currentProject = null;
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    function observeElements() {
+      const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+      fadeElements.forEach(el => observer.observe(el));
+    }
+
+    // Update progress indicator
+    function updateProgress() {
+      if (!currentProject) return;
+      
+      const section = document.getElementById(currentProject);
+      if (!section) return;
+
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const windowHeight = window.innerHeight;
+      const scrollTop = window.pageYOffset;
+      
+      const progress = Math.min(Math.max((scrollTop - sectionTop + windowHeight) / sectionHeight, 0), 1);
+      const progressPercent = progress * 100;
+      
+      progressBar.style.height = `${progressPercent}%`;
+      progressDot.style.top = `${progressPercent}%`;
+    }
+
+    // Show/hide progress indicator based on current section
+    function toggleProgressIndicator(sectionId) {
+      if (sectionId === 'saveshare' || sectionId === 'allspark') {
+        currentProject = sectionId;
+        progressIndicator.classList.add('visible', sectionId);
+        updateProgress();
+      } else {
+        currentProject = null;
+        progressIndicator.classList.remove('visible', 'saveshare', 'allspark');
+      }
+    }
+
+    // Enhanced show function with progress indicator
+    const originalShowWithTransition = showWithTransition;
+    showWithTransition = function(id) {
+      originalShowWithTransition(id);
+      toggleProgressIndicator(id);
+    };
+
+    // Scroll event listener for progress updates
+    window.addEventListener('scroll', updateProgress);
+
+    // Initialize
+    observeElements();
+
+    // Parallax effect for background
+    function updateParallax() {
+      const scrolled = window.pageYOffset;
+      const parallax1 = document.querySelector('body::before');
+      const parallax2 = document.querySelector('body::after');
+      
+      // Apply parallax transform to background elements
+      document.documentElement.style.setProperty('--parallax-1', scrolled * 0.5 + 'px');
+      document.documentElement.style.setProperty('--parallax-2', scrolled * 0.3 + 'px');
+    }
+
+    // Add CSS custom properties for parallax
+    document.documentElement.style.setProperty('--parallax-1', '0px');
+    document.documentElement.style.setProperty('--parallax-2', '0px');
+
+    // Update parallax on scroll
+    window.addEventListener('scroll', updateParallax);
+
   </script>
 </body>
 </html>
