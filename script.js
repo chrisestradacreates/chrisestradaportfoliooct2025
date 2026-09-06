@@ -120,8 +120,8 @@
     });
 
     function raf() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
+      ringX += (mouseX - ringX) * 0.22;
+      ringY += (mouseY - ringY) * 0.22;
       pressedScale += (targetScale - pressedScale) * 0.3;
       ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%) scale(${pressedScale})`;
       requestAnimationFrame(raf);
