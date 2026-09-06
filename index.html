@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chris Estrada · Product &amp; Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body class="no-scroll">
+
+  <!-- Boot loader -->
+  <div id="loader" class="loader">
+    <div class="scanlines"></div>
+    <div class="loader-content">
+      <p class="loader-eyebrow">LOADING PROFILE</p>
+      <div class="loader-name-wrap">
+        <span id="loader-name" class="loader-name">CHRIS ESTRADA</span>
+      </div>
+    </div>
+    <div class="block-grid" id="block-grid"></div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="noise-overlay"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">Chris Estrada</a>
+      <nav>
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 id="hero-h1"><span class="reveal-word">Hi,</span> <span class="reveal-word">I'm</span> <span class="reveal-word">Chris</span> <span class="reveal-word">Estrada.</span><br><span class="reveal-word">I</span> <span class="reveal-word word-elegant">design</span> <span class="reveal-word">and</span> <span class="reveal-word word-technical">build</span> <span class="reveal-word">with</span> <em id="rotating-word" class="rotating-word reveal-word">empathy.</em></h1>
+      <p class="hero-sub" data-reveal>I blend engineering, design, and product to understand problems and help build solutions with a human-centered perspective.</p>
+      <div class="hero-cta" data-reveal>
+        <a href="#work" class="btn btn-primary magnetic"><span>View my work</span></a>
+        <a href="#contact" class="btn btn-secondary magnetic"><span>Get in touch</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="section-inner">
+      <h2 data-reveal>View Work</h2>
+
+      <div class="case-timeline">
+        <article class="case-timeline-item" data-reveal>
+          <p class="timeline-date">Jun to Sep 2026</p>
+          <h3>Disney Streaming</h3>
+          <p>AI product work and a major initiative project as a Product Management Intern at Disney Streaming.</p>
+          <a href="#" class="case-link" data-case="disneystreaming">View case study <span class="arrow">&rarr;</span></a>
+        </article>
+
+        <article class="case-timeline-item" data-reveal>
+          <p class="timeline-date">Jun to Aug 2025</p>
+          <h3>AllSparkLegal</h3>
+          <p>A Spanish-accessible AI legal intake platform for workers in California, launching as FiredInCalifornia.com. Built a bilingual chatbot with voice input and legal triage automation to make legal help more accessible.</p>
+          <a href="#" class="case-link" data-case="allsparklegal">View case study <span class="arrow">&rarr;</span></a>
+        </article>
+
+        <article class="case-timeline-item" data-reveal>
+          <p class="timeline-date">Project</p>
+          <h3>SaveShare</h3>
+          <p>A safer, campus-specific ride-sharing prototype for students. .edu verification, ride posting and joining, integrated chat, and event discovery, designed and researched solo in Figma.</p>
+          <a href="#" class="case-link" data-case="saveshare">View case study <span class="arrow">&rarr;</span></a>
+        </article>
+
+        <article class="case-timeline-item" data-reveal>
+          <p class="timeline-date">Personal Project</p>
+          <h3>Puzzle Paws</h3>
+          <p>A pixel-art browser adventure game where you raise a cat down a winding trail, battling six creatures through memory, reaction, and rhythm mini-puzzles. Built solo in vanilla JavaScript.</p>
+          <a href="#" class="case-link" data-case="puzzlepaws">View case study <span class="arrow">&rarr;</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-alt">
+    <div class="section-inner about-grid">
+      <div data-reveal>
+        <p class="section-label">About</p>
+        <h2>A bit about me</h2>
+        <p>I'm a student at Stanford University majoring in Design, an interdisciplinary engineering degree that equips me to build across both digital and physical mediums with a human-centered perspective, as I work toward a career in product.</p>
+        <p>I've always been both creative and technical, and studying design has let me bridge disciplines, from prototyping and systems thinking to user research and storytelling. My passion for games fuels my interest in user experience and accessibility, while my love for karaoke and theatre reminds me to bring creativity, empathy, and energy into everything I work on. Looking for a karaoke partner? Count me in.</p>
+        <div class="interest-tags">
+          <span>Games</span>
+          <span>Accessibility</span>
+          <span>Karaoke</span>
+          <span>Theatre</span>
+        </div>
+      </div>
+      <div class="timeline" data-reveal>
+        <div class="timeline-item">
+          <p class="timeline-date">Present</p>
+          <p class="timeline-role">Current Senior @ Stanford University</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-date">Jun to Sep 2026</p>
+          <p class="timeline-role">Product Management Intern @ Disney Streaming</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-date">Jun to Aug 2025</p>
+          <p class="timeline-role">Product Management Intern @ AllSparkLegal</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-date">Jun to Dec 2024</p>
+          <p class="timeline-role">Product Management and Business Development Intern @ Xsolla</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="section-inner contact-inner">
+      <p class="section-label" data-reveal>Contact</p>
+      <h2 data-reveal>Let's chat!</h2>
+      <p data-reveal>Based in Stanford, California. Always up for a conversation about product, design, or a good game night.</p>
+      <div class="contact-links" data-reveal>
+        <a href="mailto:chrisest@stanford.edu" class="magnetic"><span>chrisest@stanford.edu</span></a>
+        <a href="https://linkedin.com/in/chrisestradaa/" class="magnetic" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+        <a href="https://docs.google.com/document/d/19d789AUfRfxIb0Nva5QAnQp6FXj9lneB3Rjv8E6taVk/edit" class="magnetic" target="_blank" rel="noopener"><span>Resume</span></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Chris Estrada. Built with care.</p>
+    <button class="back-to-top magnetic" id="back-to-top" aria-label="Back to top">&uarr;</button>
+  </footer>
+
+  <!-- Case study modal -->
+  <div class="case-modal" id="case-modal" aria-hidden="true">
+    <div class="case-modal-backdrop" id="case-modal-backdrop"></div>
+    <div class="case-modal-panel" role="dialog" aria-modal="true">
+      <button class="case-modal-close magnetic" id="case-modal-close" aria-label="Close case study">&times;</button>
+      <div class="case-modal-body" id="case-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Case study content templates -->
+  <template id="case-saveshare">
+    <p class="cm-tag">Project</p>
+    <h2 class="cm-title">SaveShare</h2>
+    <p class="cm-subtitle">A safer, campus-specific ride-sharing prototype for students.</p>
+
+    <div class="cm-meta">
+      <div><span>Role</span><p>Product Manager · Researcher · Designer</p></div>
+      <div><span>Duration</span><p>4 weeks</p></div>
+      <div><span>Tools</span><p>Figma</p></div>
+    </div>
+
+    <p>SaveShare is a campus-exclusive ride-sharing prototype that helps students coordinate rides safely, affordably, and sustainably. As a 4-week solo class project, I led the entire process myself, from research and validation to prototyping and presentation, building in .edu verification, ride posting and joining, and integrated chat.</p>
+
+    <button class="cm-more-toggle">View More Details <span class="cm-more-arrow">&rarr;</span></button>
+
+    <div class="cm-more">
+      <h3>Problem</h3>
+      <p>Students attending the same school often travel to common destinations but typically request individual or shared Uber rides, leading to high costs, inefficient resource use, and potential safety concerns. Existing ride-sharing options like Uber Pool provide minimal cost savings and little coordination between students. There is a need for a more sustainable, affordable, and secure way to share rides among verified students.</p>
+
+      <h3>Research &amp; Validation</h3>
+      <p>I spoke with Stanford students about how they coordinate rides and observed ride-related posts on Fizz, where users often requested rides but rarely got responses. This validated the need for a campus-only ride-sharing platform focused on verified users, simple coordination, and sustainability.</p>
+
+      <h3>Product Goals</h3>
+      <ul>
+        <li>Build trust through .edu verification</li>
+        <li>Simplify ride posting and joining</li>
+        <li>Encourage shared rides for sustainability</li>
+        <li>Keep users in-app with integrated chat</li>
+      </ul>
+
+      <h3>Design Process</h3>
+      <ol class="cm-process">
+        <li><span>Week 1</span>User insights and MVP scope</li>
+        <li><span>Week 2</span>User flows and wireframes</li>
+        <li><span>Week 3</span>High-fidelity mockups</li>
+        <li><span>Week 4</span>Usability feedback and presentation</li>
+      </ol>
+
+      <h3>Results</h3>
+      <p>I created a full prototype of SaveShare, a secure, organization-specific ride-sharing platform addressing safety, cost efficiency, and sustainability. I received strong peer and instructor feedback, and students expressed genuine interest in using the app.</p>
+    </div>
+  </template>
+
+  <template id="case-allsparklegal">
+    <p class="cm-tag">Product Management Internship · Jun to Aug 2025</p>
+    <h2 class="cm-title">AllSparkLegal</h2>
+    <p class="cm-subtitle">A Spanish-accessible AI legal intake platform.</p>
+
+    <div class="cm-meta">
+      <div><span>Role</span><p>Product Management Intern · Developer · Researcher · Designer</p></div>
+      <div><span>Duration</span><p>June to August 2025</p></div>
+      <div><span>Live Product</span><p><a href="https://firedincalifornia.com/" target="_blank" rel="noopener" class="magnetic">FiredInCalifornia.com</a></p></div>
+    </div>
+
+    <p>AllSparkLegal is a legal-tech startup focused on making employment law help more accessible for Spanish-speaking workers in California. I collaborated with an international team of engineers, lawyers, and sales to take the product from 0&rarr;1, defining the vision, user needs, and MVP for an AI-powered, bilingual legal intake chatbot with voice input and quick-reply features.</p>
+
+    <button class="cm-more-toggle">View More Details <span class="cm-more-arrow">&rarr;</span></button>
+
+    <div class="cm-more">
+      <h3>Problem</h3>
+      <p>Many Hispanic workers face language and accessibility barriers when seeking legal help. Most legal-tech platforms are English-only and overly complex. AllSparkLegal aimed to create a trustworthy, bilingual experience that simplified intake and improved accessibility for Spanish-speaking users.</p>
+
+      <h3>Research &amp; Validation</h3>
+      <ul>
+        <li>Conducted 10 user interviews with Spanish-speaking workers to uncover pain points around accessibility and trust.</li>
+        <li>Led 5 usability tests and iterated on voice-to-text, quick-reply chips, and chatbot features to reduce friction in the intake flow.</li>
+        <li>Benchmarked 5+ competitors (LegalZoom, LawDroid, SuperLawyers), revealing 4 major usability and trust gaps that informed the roadmap.</li>
+      </ul>
+
+      <h3>Product Goals</h3>
+      <ul>
+        <li>Build trust through bilingual, empathetic chatbot design</li>
+        <li>Simplify intake with quick-reply and voice-input features</li>
+        <li>Automate legal triage for faster attorney matching</li>
+        <li>Design for accessibility and usability</li>
+      </ul>
+
+      <h3>Design Process</h3>
+      <ol class="cm-process">
+        <li><span>Phase 1</span>Research synthesis and requirements definition</li>
+        <li><span>Phase 2</span>MVP scoping, color palette, and UI system creation</li>
+        <li><span>Phase 3</span>Chatbot flow design, API integration, and testing</li>
+        <li><span>Phase 4</span>Usability testing, iteration, and MVP launch</li>
+      </ol>
+
+      <h3>Results</h3>
+      <p>I helped take AllSparkLegal from 0&rarr;1, launching the first functional MVP now live as FiredInCalifornia.com. I delivered the MVP in 8 weeks, accelerating development by ~35%, and collaborated with an international cross-functional team across law, design, and engineering.</p>
+    </div>
+  </template>
+
+  <template id="case-puzzlepaws">
+    <p class="cm-tag">Personal Project · In Progress</p>
+    <h2 class="cm-title">Puzzle Paws</h2>
+    <p class="cm-subtitle">A Whisker Woods Adventure, built from scratch in vanilla JavaScript.</p>
+
+    <div class="cm-meta">
+      <div><span>Role</span><p>Solo Developer &amp; Designer</p></div>
+      <div><span>Tools</span><p>JavaScript · HTML5 Canvas · CSS</p></div>
+      <div><span>Play</span><p><a href="https://chrisestradacreates.github.io/puzzle-paws/" target="_blank" rel="noopener" class="magnetic">Play the Game</a></p></div>
+      <div><span>Code</span><p><a href="https://github.com/chrisestradacreates/puzzle-paws" target="_blank" rel="noopener" class="magnetic">View on GitHub</a></p></div>
+    </div>
+
+    <p>Puzzle Paws is a pixel-art browser game where you raise a cat and guide it down a single winding trail through Whisker Woods. Six creatures block the path in order, and each one challenges you to a different mini-puzzle before you can move forward.</p>
+
+    <button class="cm-more-toggle">View More Details <span class="cm-more-arrow">&rarr;</span></button>
+
+    <div class="cm-more">
+      <h3>How It Works</h3>
+      <p>The path can't be skipped. Every creature, from a wild Slime to the Whisker Dragon, physically blocks the trail until it's defeated. Each battle uses one of three puzzle types: a Memory Trial, a reaction-based reflex challenge, or a Simon-style rhythm match, and the puzzles get harder the closer you get to the Dragon at the end.</p>
+
+      <h3>What I Built</h3>
+      <ul>
+        <li>The full game loop, movement, and tile-based map system in vanilla JavaScript and HTML5 Canvas</li>
+        <li>Three distinct mini-puzzle types, each with its own difficulty scaling</li>
+        <li>A HUD tracking the cat's name, growth stage, and creature defeat count</li>
+        <li>Save and continue support, a pause menu, and a title-screen customization flow</li>
+      </ul>
+
+      <h3>Status</h3>
+      <p>Actively in development. The core adventure, all six creature battles, and the save system are playable end to end.</p>
+    </div>
+  </template>
+
+  <template id="case-disneystreaming">
+    <p class="cm-tag">Product Management Internship · Jun to Sep 2026</p>
+    <h2 class="cm-title">Disney Streaming</h2>
+    <p class="cm-subtitle">Product ownership for an internal AI assistant, plus a major cross-company initiative.</p>
+
+    <div class="cm-meta">
+      <div><span>Role</span><p>Product Management Intern</p></div>
+      <div><span>Duration</span><p>June to September 2026</p></div>
+      <div><span>Focus</span><p>AI Assistant &middot; Major Initiative</p></div>
+    </div>
+
+    <p>Served as product owner for an AI assistant supporting Disney+ content tooling. After interviews revealed that most adopters had churned, I shipped a 6-ticket roadmap including a widget build and a 5-guardrail suite, growing users by 63%.</p>
+
+    <button class="cm-more-toggle">View More Details <span class="cm-more-arrow">&rarr;</span></button>
+
+    <div class="cm-more">
+      <h3>Accuracy &amp; Security</h3>
+      <p>Led the accuracy and security overhaul behind the roadmap, achieving 100% accuracy across every tested layout and a 93% speed improvement, while hardening the assistant against threats like prompt injection.</p>
+
+      <h3>Widget Design</h3>
+      <p>Designed and built the assistant's widget UI from inception, then led its evolution across 18+ requirements, driving adoption through an onboarding video and cross-channel launch communication.</p>
+
+      <h3>Layout Preview</h3>
+      <p>As part of a major, confidential company-wide initiative, I led Layout Preview, working directly with engineering and design to convert stakeholder needs into functional requirements, culminating in a locked PRD.</p>
+    </div>
+  </template>
+
+  <script src="script.js?v=4"></script>
+</body>
+</html>
