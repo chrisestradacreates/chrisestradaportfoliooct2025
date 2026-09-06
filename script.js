@@ -97,7 +97,7 @@
     if (!isFinePointer) return;
     const dot = document.getElementById("cursor-dot");
     const ring = document.getElementById("cursor-ring");
-    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+    let mouseX = 0, mouseY = 0;
     let pressedScale = 1;
     let targetScale = 1;
 
@@ -105,6 +105,7 @@
       mouseX = e.clientX;
       mouseY = e.clientY;
       dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      ring.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${pressedScale})`;
     });
 
     document.addEventListener("mousedown", () => {
@@ -120,10 +121,8 @@
     });
 
     function raf() {
-      ringX += (mouseX - ringX) * 0.4;
-      ringY += (mouseY - ringY) * 0.4;
       pressedScale += (targetScale - pressedScale) * 0.3;
-      ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%) scale(${pressedScale})`;
+      ring.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${pressedScale})`;
       requestAnimationFrame(raf);
     }
     raf();
